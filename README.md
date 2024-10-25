@@ -7,6 +7,7 @@ This template follows the best practices and reproducibility specification by [S
 Initial directory structure is the minimum requirement for a bug-free pipeline execution; however, more complex pipelines can be implemented based on expanding current directory structure.
 
 ```
+# Example directory structure
 ├── .gitignore
 ├── README.md
 ├── LICENSE.md
