@@ -13,14 +13,11 @@ Initial directory structure is the minimum requirement for a bug-free pipeline e
 ├── LICENSE.md
 ├── workflow
 │   ├── rules
-|   │   ├── commons.smk
-|   │   └── test.smk
+|   │   └── commons.smk
 │   ├── envs
-|   │   ├── bamstats.sif
 |   │   ├── samtools_env.yaml
 |   │   └── global_env.yaml
 │   ├── scripts
-|   │   └── txt_to_fasta.py
 |   └── Snakefile
 ├── config
 │   ├── config.yaml
@@ -33,6 +30,7 @@ Initial directory structure is the minimum requirement for a bug-free pipeline e
 #### How to run
 
 The run command depends on the use case of the pipeline. For example if a Singularity container with a bash command is used the full directory path for the output should be passed onto Snakemake for mapping local directory to container file system. The following command would run a test pipeline and generates a few test text file outputs:  
-`snakemake -j 2 --rerun-incomplete --use-conda --use-singularity --singularity-args "--bind <result's dir full path>"`
+`snakemake -j 2 --rerun-incomplete --use-conda --use-singularity --singularity-args "--bind <result's dir full path>"`  
+`snakemake -j 2 --rerun-incomplete --use-conda --configfile config/config.yaml`
 
-**Note:** Full path of input files should be supplied in `config/units.tsv` prior to running the test process.
+**Note:** `sample_id` is primary key and therefore, `config/units.tsv` and `config/samples.tsv` must contain the same `sample_id` values.
