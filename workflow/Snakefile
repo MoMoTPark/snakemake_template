@@ -7,9 +7,8 @@ conda: "envs/global_env.yaml"
 configfile: "config/config.yaml"
 
 include: "rules/commons.smk"
-include: "rules/test.smk"
+include: "rules/process.smk"
 
 rule all:
     input: 
         expand("results/test/{id}_test_with_param.txt", id=samples['sample_id']),
-        expand("results/test/{id}_conditional.txt", id=samples['sample_id']),

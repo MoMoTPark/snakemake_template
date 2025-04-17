@@ -1,3 +1,5 @@
 sample_id	path
 sample_1	<full path for sample_1>
-sample_2	<full path for sample_2>
+sample_id	read_1	read_2
+sample_1	<full path for read_1>	<full path for read_2>
+
