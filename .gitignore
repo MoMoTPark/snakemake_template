@@ -4,4 +4,4 @@ results/
 *__pycache__
 logs/
 benchmarks/
-
+.Rhistory
